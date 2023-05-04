@@ -8,6 +8,7 @@ function csv_generator()
 {
 	header('Content-Type: text/csv; charset=utf-8');
 	header('Content-Disposition: attachment; filename=cards.csv');
+	echo "\xEF\xBB\xBF";
 
 	$cards_args = array(
 		'post_type' => 'cards',
